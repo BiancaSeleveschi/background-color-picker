@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Change the color</h1>
+    <button @click="generator" class="btn btn-light border-2 rounded-2 p-2 shadow m-3">New color</button>
+    <h3>{{ color }}</h3>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      color: "#FFFFFF"
+    };
+  },
+  methods: {
+    generator: function () {
+      this.color = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+      document.body.style.background = this.color;
+    }
   }
 }
 </script>
