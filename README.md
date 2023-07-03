@@ -1,5 +1,7 @@
 # background-color-picker
+The Background Color Picker app I worked on allows users to easily change the background color with just a click.
 
+Demo: https://background-color-picker1.netlify.app/
 ## Project setup
 ```
 npm install
